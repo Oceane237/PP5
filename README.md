@@ -42,11 +42,47 @@ In this exercise you will:
 
 **Your Commands & Output**
 
-```bash
-# Paste here the sequence of git commands you ran
-# and the relevant terminal output (e.g., branch listing, merge messages)
-```
 
+Paste here the sequence of git commands you ran
+and the relevant terminal output (e.g., branch listing, merge messages)
+command
+
+```bash
+ git init
+```
+Output:
+Initialized empty Git repository in /home/user/new-repo/.git/
+```bash
+ git checkout -b feature-1
+```
+output:
+Switched to a new branch 'feature-1'
+```bash
+git add feature.txt
+git commit -m "Add feature.txt describing feature-1"
+```
+output:
+[feature-1 bc23df0] Add feature.txt for feature-1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+```bash
+git checkout master
+```
+output:
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+```bash
+git merge feature-1
+```
+output:
+Updating 4f7dd39..bc23df0
+Fast-forward
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+```
+```
 ---
 
 ### Task 2: Bare Repository on an SSH Server
@@ -66,10 +102,28 @@ In this exercise you will:
 
 **Your Commands & Output**
 
-```bash
-# Paste here the push & clone commands and outputs
-```
+ Paste here the push & clone commands and outputs
 
+```bash
+ git push -f origin-ssh master
+```
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 226 bytes | 226.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To 128.140.85.215:~/repos/myproject.git
+<+> bc23df0...aef20ed master -> master (forced update)
+   
+```bash
+git clone okndaguesob@128.140.85.215:~/repos/myproject.git myproject-clone
+```
+Cloning into 'myproject-clone'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+```
+```
 ---
 
 ### Task 3: GitHub & THGA GitLab
@@ -88,9 +142,24 @@ In this exercise you will:
 
 **Your Commands & Output**
 
+
+ Paste here the remote‐adding & push outp
+
+
 ```bash
-# Paste here the remote‐adding & push outputs
+git remote add gitlab git@gitlab.thga.de:Oceane237/myproject.gh.git
 ```
+Output:
+gitlab  git@gitlab.thga.de:Oceane237/myproject-gh.git (fetch)
+gitlab  git@gitlab.thga.de:Oceane237/myproject-gh.git (push)
+
+```bash
+git remote add gitlab git@gitlab.thga.de:oceane.ndague-sob/myproject-gl.git
+```
+Output:
+gitlab  git@gitlab.thga.de:oceane.ndague-sob/myproject-gl.git (fetch)
+gitlab  git@gitlab.thga.de:oceane.ndague-sob/myproject-gl.git (push)
+
 
 ---
 
@@ -105,6 +174,10 @@ In this exercise you will:
 
 * GitHub PR: *paste URL and a one-sentence summary*
 * GitLab MR: *paste URL and a one-sentence summary*
+
+GitHub PR: *paste URL and a one-sentence summary*
+https://github.com/STEMgraph/474307f2-a30c-4639-9379-298bf1a4c00b/pull/3
+<summary> Summary: Updated README to add a note about PP5 changes</summary>
 
 ---
 
